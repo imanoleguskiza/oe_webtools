@@ -1,0 +1,6 @@
+<?php
+
+function oe_webtools_page_attachments(array &$attachments) {
+  // Load the webtools smartloader on all pages.
+  $attachments['#attached']['library'][] = 'oe_webtools/webtools-smartloader';
+}

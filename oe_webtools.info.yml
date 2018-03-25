@@ -1,0 +1,6 @@
+name: Webtools
+description: OpenEuropa webtools intregration
+package: Webtools
+
+type: module
+core: 8.x

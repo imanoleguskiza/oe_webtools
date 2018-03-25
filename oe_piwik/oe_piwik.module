@@ -1,0 +1,29 @@
+<?php
+
+use Drupal\Core\Url;
+use Drupal\oe_piwik\PiwikEvent;
+
+/**
+ * Implements hook_page_attachments().
+ *
+ * Collects the piwik settings and sets them as a JSON snippet.
+ */
+function oe_piwik_page_attachments(array &$attachments) {
+  $piwik_data = new PiwikEvent();
+
+  $event_dispatcher = \Drupal::service('event_dispatcher');
+  $event_dispatcher->dispatch(PiwikEvent::NAME, $piwik_data);
+  if ($piwik_data->isValid()) {
+    $attachments['#attached']['html_head'][] = [
+      [
+        '#type' => 'html_tag',
+        '#tag' => 'script',
+        '#value' => $piwik_data,
+        '#attributes' => array('type' => 'application/json'),
+      ],
+      // A key, to make it possible to recognize this when altering.
+      'oe-piwik'
+    ];
+  }
+
+}

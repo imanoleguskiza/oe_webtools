@@ -1,0 +1,6 @@
+services:
+  oe_piwik.event_subscriber:
+    class: Drupal\oe_piwik\EventSubscriber\PiwikSiteSettings
+    arguments: ['@config.factory', '@request_stack']
+    tags:
+      - { name: event_subscriber }

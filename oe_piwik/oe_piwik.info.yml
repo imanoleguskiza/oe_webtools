@@ -1,0 +1,5 @@
+name: oe_piwik
+type: module
+description: The OpenEuropa Piwik module uses the webtools Piwik service for analitics.
+package: Webtools
+core: 8.x
