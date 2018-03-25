@@ -56,7 +56,7 @@ class PiwikSiteSettings implements EventSubscriberInterface {
     if ($request_exception instanceof AccessDeniedHttpException) {
       $event->setIs403Page();
     }
-    
+
   }
 
   /**

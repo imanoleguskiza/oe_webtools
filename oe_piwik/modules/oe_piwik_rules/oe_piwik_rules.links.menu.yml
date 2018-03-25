@@ -1,0 +1,9 @@
+
+# Piwik rule menu items definition
+entity.piwik_rule.collection:
+  title: 'Piwik site section rules'
+  route_name: entity.piwik_rule.collection
+  description: 'Manage Piwik site section rules.'
+  parent: system.admin_structure
+  weight: 99
+

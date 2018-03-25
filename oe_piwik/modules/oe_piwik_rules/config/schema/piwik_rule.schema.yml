@@ -1,0 +1,15 @@
+oe_piwik_rules.piwik_rule.*:
+  type: config_entity
+  label: 'Piwik rule config'
+  mapping:
+    id:
+      type: string
+      label: ID
+    section:
+      type: label
+      label: 'Section'
+    regex:
+      type: string
+      label: Regex
+    uuid:
+      type: string

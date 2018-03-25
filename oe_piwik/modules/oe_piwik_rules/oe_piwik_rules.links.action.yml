@@ -1,0 +1,6 @@
+entity.piwik_rule.add_form:
+  route_name: entity.piwik_rule.add_form
+  title: 'Add Piwik rule'
+  appears_on:
+    - entity.piwik_rule.collection
+

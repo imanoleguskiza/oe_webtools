@@ -41,6 +41,10 @@ class PiwikEvent extends Event implements JsonSerializable {
     $this->sitePath = $path;
   }
 
+  public function setSiteSection(string $section) {
+    $this->siteSection = $section;
+  }
+
   public function isValid() {
     // SiteId is required.
     if (!$this->siteId) {
